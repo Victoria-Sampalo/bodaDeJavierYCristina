@@ -4561,6 +4561,8 @@ td:last-child {
 .s-footer .link-list a {
     color : var(--color-gray-15);
     border: none;
+    
+
 }
 
 .s-footer .link-list a:focus,
