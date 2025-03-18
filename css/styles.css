@@ -4009,8 +4009,8 @@ td:last-child {
     }
     .program-list {
         display: block;
-        padding-left:5rem;
-        margin:1rem;
+        padding-left:1rem;
+        margin:0.5rem;
     }
 
     .program-item {
@@ -4024,8 +4024,8 @@ td:last-child {
     .program-item img {
         margin-right: 20px;
         margin-bottom: 0;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
 
     .program-time {
