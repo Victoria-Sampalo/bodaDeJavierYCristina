@@ -3420,6 +3420,8 @@ td:last-child {
     margin-top    : 0;
     margin-bottom : var(--vspace-1_25);
     text-align: center; 
+    font-family: 'Parisienne', cursive;
+
 }
 .s-intro__content-date {
     display: block; 
