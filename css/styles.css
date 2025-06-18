@@ -97,6 +97,7 @@
     --color-1: hsla(12, 75%, 45%, 1);
     --color-2: hsla(96, 10%, 19%, 1);
     --color-3: hsl(0, 0%, 10%);
+    --color-4: #465841;
 
   /* theme color variations
    */
@@ -2743,7 +2744,7 @@ td:last-child {
     position      : absolute;
     top           : -0.25em;
     left          : -0.1em;
-    opacity       : 0.5;
+     opacity       : 0; /*  Lo voy a ocultar de momento */
 }
 
 .section-header.light-on-dark .text-display-title {
@@ -3067,7 +3068,7 @@ td:last-child {
 .s-header.sticky {
     opacity         : 0;
     visibility      : hidden;
-    background-color: var(--color-3);
+    background-color: var(--color-4);
     box-shadow      : var(--box-shadow);
     border          : none;
     border-bottom   : 1px solid rgba(255, 255, 255, 0.03);
@@ -3092,7 +3093,7 @@ td:last-child {
     height          : var(--header-height);
     align-items     : center;
     justify-content : space-between;
-    background-color: var(--color-3);
+    background-color: var(--color-4);
     border          : 1px solid rgba(255, 255, 255, 0.03);
     padding         : 0 var(--gutter);
     box-shadow      : var(--box-shadow);
@@ -3159,7 +3160,7 @@ td:last-child {
     font-weight        : 400;
     font-size          : 1.5rem;
     line-height        : var(--vspace-1);
-    color              : var(--color-gray-14);
+    color              : white;
     padding            : 0 1.2rem;
     transition-property: color, background-color;
 }
@@ -3269,7 +3270,8 @@ td:last-child {
         height       : var(--header-height);
         box-shadow   : var(--box-shadow);
         border       : none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        border-bottom: 1px solid var(--color-4);
+        background-color:var(--color-4);
     }
 
     .s-header__logo {
@@ -3307,6 +3309,7 @@ td:last-child {
     .s-header__menu-links a {
         font-size: var(--text-size);
         padding  : var(--vspace-0_25) 0;
+        color:white;
     }
 
     .s-header__menu-links {
@@ -3338,6 +3341,7 @@ td:last-child {
         transform       : scaleY(1);
         transition      : transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
         transition-delay: 0s;
+        background-color: var(--color-4); 
     }
 
     .menu-is-open .s-header__menu-links,
@@ -3890,7 +3894,7 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 .s-about {
-    padding-top: var(--vspace-7);
+    padding-top: var(--vspace-2);
     color      : var(--color-3);
 }
 
@@ -3957,6 +3961,85 @@ td:last-child {
  *
  *
  * ------------------------------------------------------------------- */
+
+
+
+
+ /* TEEST */
+
+ #timeline {
+    position: relative;
+    padding: 2rem;
+  }
+
+  .timeline-container {
+    position: relative;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .timeline-item.left {
+    justify-content: flex-start;
+  }
+
+  .timeline-item.right {
+    justify-content: flex-end;
+  }
+
+  .timeline-icon {
+    width: 2rem;
+    height: 2rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timeline-icon img {
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+  }
+
+  .timeline-content {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    max-width: 50%;
+  }
+
+  .timeline-content h3 {
+    margin-top: 0;
+  }
+
+  .timeline-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+  }
+
+  .timeline-item.left .timeline-icon {
+    margin-right: 1rem;
+  }
+
+  .timeline-item.right .timeline-icon {
+    margin-left: 1rem;
+  }
+
+ /* fin test */
 
  .program-list {
     list-style: none;
@@ -4139,7 +4222,7 @@ td:last-child {
 
 /* Countdown Section */
 .s-countdown {
-    background: #000;
+    background-color: var(--color-4);
     color: #fff;
     padding: 50px 0;
     text-align: center;
@@ -4193,9 +4276,10 @@ td:last-child {
 }
 
 .attention-getter {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 20px;
+    /* font-weight: bold; */
+    margin-bottom: 1rem;
+
 }
 
 /* Spinner */
@@ -4484,9 +4568,9 @@ td:last-child {
  * ------------------------------------------------------------------- */
 .s-footer {
     --bottom-padding: var(--vspace-2_5);
-    background-color: var(--color-3);
+    background-color: var(--color-4);
     margin-top      : auto;
-    padding-top     : var(--vspace-6);
+    padding-top     : var(--vspace-2);
     padding-bottom  : var(--bottom-padding);
     color           : var(--color-gray-15);
 }
