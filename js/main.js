@@ -328,7 +328,6 @@
         setInterval(countdown, 1000);
     }; // end ssCountdown
 
-
    /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
