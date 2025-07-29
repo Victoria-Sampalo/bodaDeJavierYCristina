@@ -3418,6 +3418,7 @@ td:last-child {
     font-weight  : 900;
     margin-bottom: var(--vspace-0_125);
     color        : var(--color-1);
+    text-align: center;
 }
 
 .s-intro__content-title {
@@ -3428,6 +3429,7 @@ td:last-child {
     margin-bottom : var(--vspace-1_25);
     text-align: center; 
     font-family: 'Parisienne', cursive;
+ 
 
 }
 .s-intro__content-date {
@@ -3441,10 +3443,15 @@ td:last-child {
     --color-btn-hover     : var(--color-1);
     --color-btn-hover-text: var(--color-white);
     margin-top            : var(--vspace-2);
+    display: flex;
+    margin-left: 7em;
+    align-items: center;
+    
 }
 
 .s-intro__content-btns .btn {
     margin-right: var(--vspace-0_375);
+ 
 }
 
 .s-intro__content-btns .btn:last-child {
