@@ -79,6 +79,7 @@
 :root {
     --font-1: "Public Sans", Sans-serif;
     --font-2: "Castoro", Serif;
+    --font-3: "Castoro", "Public Sans", Sans-serif;
 
   /* monospace
    */
@@ -98,6 +99,7 @@
     --color-2: hsla(96, 10%, 19%, 1);
     --color-3: hsl(0, 0%, 10%);
     --color-4: #465841;
+    --color-5:#dfd3c0;
 
   /* theme color variations
    */
@@ -970,7 +972,8 @@ html {
 }
 
 body {
-    background-color          : var(--color-body-bg);
+    /* background-color          : var(--color-body-bg); */
+    background-color: var(--color-5);
     -webkit-overflow-scrolling: touch;
     -webkit-text-size-adjust  : 100%;
     -webkit-font-smoothing    : antialiased;
@@ -1508,7 +1511,7 @@ hr.fancy::before {
  * -------------------------------------------------------------------- */
 .lead,
 .attention-getter {
-    font-family: var(--font-1);
+    font-family: var(--font-2);
     font-size  : var(--text-md);
     line-height: var(--vspace-1_25);
 }
@@ -3978,6 +3981,7 @@ td:last-child {
     padding:0;
     margin:0;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     /* padding-top     : var(--vspace-5_5);
     padding-bottom  : var(--vspace-4); */
@@ -3988,11 +3992,11 @@ td:last-child {
 
 .program-item {
    display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
-    background-color: #fff;
+    text-align: left;
+    margin-bottom: 3rem;
+    background-color: #ffffffde;
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -4001,8 +4005,9 @@ td:last-child {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
    
     
+   
+    
 }
-
 .program-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -4016,6 +4021,7 @@ td:last-child {
     height: 100px;
     margin-bottom: 2rem;
     margin-left: 1.5rem;
+    margin-right: 20px;
 
 }
 
@@ -4023,6 +4029,8 @@ td:last-child {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 5px;
+     margin-right: 1.5rem;
+    
 }
 
 .line-timeline{
@@ -4035,6 +4043,7 @@ td:last-child {
 .program-description {
     font-size: 18px;
     color: var(--color-4);
+    margin-bottom: 0;
 }
 
  /* ------------------------------------------------------------------- 
@@ -4057,6 +4066,7 @@ td:last-child {
         align-items: center;
         text-align: left;
         margin-bottom: 3rem;
+        justify-content: space-around;
     }
 
     .program-item img {
@@ -4082,8 +4092,7 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 /* Schedule Section */
-.s-schedule {
-    background: #000;
+/* .s-schedule {
     color: #fff;
     padding: 50px 0;
     text-align: center;
@@ -4114,7 +4123,7 @@ td:last-child {
 
 .schedule-description {
     font-size: 18px;
-}
+} */
 /* ===================================================================
  * # LOCATION
  *
@@ -4122,7 +4131,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 /* Location Section */
 .s-location {
-    background: #fff;
+    background: var(--color-5);
     color: #000;
     padding: 50px 0;
     text-align: center;
@@ -4133,6 +4142,7 @@ td:last-child {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    
 }
 
 .s-location__content .column {
@@ -4151,10 +4161,12 @@ img.s-location__icon{
     flex-direction: column;
     align-items: center;
     padding: 0px;
+   
 }
 
 .s-location_part2 p{ 
     font-size:20px;
+    
 }
 
 
@@ -4173,17 +4185,14 @@ img.s-location__icon{
     order:3;
 }
 
-@media screen and (max-width: 800px) {
-    .s-location__content div:nth-child(1){    
-        order:1;
-    }
-    .s-location__content div:nth-child(2){ 
-        order:3;
-    }
-    .s-location__content div:nth-child(3){ 
-        order:2;
-    }
-
+@media (max-width: 768px) {
+  .s-location__content {
+    flex-direction: column;
+  }
+  .s-location_part1,
+  .s-location_part2 {
+    width: 100%;
+  }
 }
 /* ===================================================================
  * # COUNTDOWN
