@@ -3392,7 +3392,8 @@ td:last-child {
     --content-padding-bottom: 8rem;
     --content-min-height    : calc(var(--vspace-1) * 27);
     z-index                 : 2;
-    background-color        : var(--color-gray-10);
+    /* background-color        : var(--color-gray-10); */
+    background-color: var(--color-5);
     width                   : 100%;
     height                  : max(var(--content-min-height), 100vh);
     overflow                : hidden;
@@ -4084,6 +4085,15 @@ td:last-child {
     .program-description {
         margin-bottom: 0;
     }
+
+    .ceremonia{
+        font-size: 17px;
+    }
+     .fiesta{
+        font-size: 16px;
+    }
+  
+
 }
 
 /* ===================================================================
@@ -4518,7 +4528,13 @@ img.s-location__icon{
 
 }
 
-
+/* Estilos para pantallas grandes */
+@media (min-width: 1200px) {
+  .details-form iframe {
+    width: 1000px;
+    height: 1794px;
+  }
+}
 
 /* ===================================================================
  * # FOOTER
